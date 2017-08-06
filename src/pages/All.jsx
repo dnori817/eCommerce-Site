@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import PRODUCTS from "json/products.json";
+import { Link } from "react-router-dom";
 
 class All extends Component {
 	render() {
