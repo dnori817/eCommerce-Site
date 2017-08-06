@@ -1,16 +1,24 @@
 import "./App.scss";
 import React from "react";
+import { BrowserRouter, Switch, Route } from "react-router-dom";
 import PRODUCTS from "json/products.json";
+import Home from "pages/Home";
+import All from "pages/All";
+import Category1 from "pages/Category1";
+
+
 
 class App extends React.Component {
 	render() {
 		return (
-			<div className="App">
-				{PRODUCTS.map((product) => {
-					return <h1>{product.name}</h1>;
-				})}
-				{/* <pre>{JSON.stringify(PRODUCTS, null, 2)}</pre> */}
-			</div>
+			<BrowserRouter>
+				<Switch>
+					<Route exact path="/" component={Home}/>
+					<Route exact path="/All" component={All}/>
+					<Route exact path="/Category1" component={Category1}/>
+				</Switch>
+			</BrowserRouter>
+
 		);
 	}
 }
