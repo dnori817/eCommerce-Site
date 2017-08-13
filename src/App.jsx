@@ -11,6 +11,27 @@ import Cart from "pages/Cart";
 
 
 class App extends React.Component {
+	state = {
+		products: PRODUCTS,
+		cart: [],
+	}
+
+	_getProduct = (productId) => {
+		return this.state.products.reduce((prev, product) => {
+			return product.id === productId ? product : prev;
+		});
+	}
+	_addToCart = (productId) => {
+		const { cart, products } = this.state;
+		this.setState({
+			cart: [
+				...cart,
+				this._getProduct(productId),
+			],
+			// cartTotal: cart.length + 1,
+		});
+		console.log(cart);
+	}
 	render() {
 		return (
 			<BrowserRouter>
@@ -21,7 +42,11 @@ class App extends React.Component {
 						<Route exact path="/All" component={All}/>
 						<Route exact path="/Cart" component={Cart}/>
 						<Route exact path="/Detail/:productId" 			render={(props) => {
-							return <Detail productId= {props.match.params.productId} />;
+							return (
+								<Detail
+									product= {this._getProduct(props.match.params.productId)}
+									addToCart = {this._addToCart}
+								/>);
 						}}
 						/>
 					</Switch>

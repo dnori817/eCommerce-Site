@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import PRODUCTS from "json/products.json";
 import { Link } from "react-router-dom";
+// import { cart } from "../App.jsx";
 
 
 class Cart extends Component {
@@ -8,6 +9,7 @@ class Cart extends Component {
 		return (
 			<div>
 				<h1>Your Cart is Empty</h1>;
+
 			</div>
 		);
 	}

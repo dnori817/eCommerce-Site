@@ -11,7 +11,7 @@ class All extends Component {
 					{PRODUCTS.map((product) => {
 						return (
 							<div className="container">
-								<Link to={"./Detail/:productId"}>
+								<Link to={`./Detail/${product.id}`}>
 									<div className="All-prod center">
 										<h3>{product.name}</h3>
 										<img src={product.images[0].medium}/>

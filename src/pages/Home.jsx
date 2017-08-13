@@ -10,16 +10,17 @@ class Home extends Component {
 					{PRODUCTS.map((product) => {
 						return (
 							<div>
-
-								<img src={product.images[0].small}/>
-								<img src={product.images[1].large}/>
-								<img src={product.images[2].small}/>
-								<img src={product.images[0].medium}/>
-								<img src={product.images[2].large}/>
-								<img src={product.images[1].small}/>
-								<img src={product.images[1].medium}/>
-								<img src={product.images[2].medium}/>
-								<img src={product.images[0].large}/>
+								<Link to={"./All"}>
+									<img src={product.images[0].small}/>
+									<img src={product.images[1].large}/>
+									<img src={product.images[2].small}/>
+									<img src={product.images[0].medium}/>
+									<img src={product.images[2].large}/>
+									<img src={product.images[1].small}/>
+									<img src={product.images[1].medium}/>
+									<img src={product.images[2].medium}/>
+									<img src={product.images[0].large}/>
+								</Link>
 							</div>
 						);
 					})}
