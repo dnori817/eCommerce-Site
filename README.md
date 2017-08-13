@@ -1,46 +1,57 @@
-# NYCDA React / Webpack Template
+# React eCommerce Site
+___
 
-This template allows you to very quickly spin up a React application that's
-equipped with Webpack for builds. It provides the following features:
+## Pages:
+### Home/Landing Page
+* shows featured products
+### All Items Page
+* shows all items available for purchase
+### Category Page
+* shows all items of a specific category
+### Item Page
+* shows selected item name, image, description, price and purchase options (sizes, colors, quantity)
+* button to add item to cart
+### Shopping Cart Page
+* shows all items user selected to add to shopping cart
+* buttons for each item to remove item from cart, change quantity
+* buttons to continue shopping and to checkout
+* show total price for all item in cart
+### Checkout Page
+* form to enter shipping info
+* total price with tax and shipping calculated
+* button to confirm purchase (not functional, will link you to Order Received Page)
+### Order Received Page
+* dummy page acknowledging purchase has been received
+* link to return to store
+##### all pages will have a navigation bar to the left or top of page with links to item categories and to shopping cart (shopping cart link will show total items in cart)
+___
+## Components:
+### Featured Items
+* picks featured items to display on home page
+### Item Info On Hover
+* will take item's info and display it on hover
+### Add Item To Cart
+* will add selected item to shopping cart on button press
+### Calculate Total
+* will add the prices of the items together for total price of order
+### Calculate Shipping
+* will calculate shipping cost based on total price of order
+### Calculate Sales Tax
+* will calculate sales tax based on user's State (not sure how difficult this will be but I would like to try)
 
-* ES2017 and JSX using Babel
-* Style components using SASS
-* Asset resolving via file loader for JS and CSS
-* Image compression using image-webpack-loader
-* Hot module replacement with Webpack Dev Server
-* Source maps in development and production
-* A standard minified production build
 
-## Getting Started
+___
+## Inspiration:
+I really like the merch store for the band glassjaw
+http://glassjaw.merchdirect.com/
 
-You must be on a Node version greater than 6 to use this. Once you've npm
-installed, there are only two commands:
+##### Homepage
 
-* `npm run start` - Runs the development server (Specify port with PORT, default 3000)
-* `npm run build` - Builds the production version, which goes into `dist`
+![inline]https://www.dropbox.com/s/6p4mchrfi6uqc74/Glassjaw%20-%20Google%20Chrome_013.png?dl=1
+Displays featured items.  I like how the items are tiles and item info appears on hover and also the different sized images for the products.
 
-Once you start building things with this template, you may want to remove the
-`.placeholder` files in `src/assets/fonts`, `src/assets/images`, and
-`src/components` folders. They were added just to check in those directories.
+##### Category Page
+![inline](https://www.dropbox.com/s/inc1a50w3bg1vpx/All%20-%20Glassjaw%20-%20Google%20Chrome_014.png?dl=1)
+Shows all items of a category. On this page all items are the same size for better comparison.  Also shows item description on hover.  Solid background makes the items stand out more.
 
-## Project Structure
-
-```
-.
-├── src                # Source code, including raw assets
-│   ├── App.jsx        ### The top-level component for React
-│   ├── App.scss       ### Any general, non-component styling done here
-│   ├── assets         ### Static assets
-│   │   ├── fonts      ##### Fonts(eot|otf|ttf|woff|woff2)
-│   │   └── images     ##### Images (gif|png|jpe?g|svg|ico)
-│   ├── components     ### Any shared components
-│   ├── index.ejs      ### HTML template for the app
-│   └── index.js       ### Webpack entry point / component mounting
-├── dist               # Any built files are here, not checked in
-└── webpack.config.js  # Webpack configuration for dev _and_ production
-```
-
-## License
-
-This is available under the MIT License. Any distributions of it must also carry
-this license.
+http://

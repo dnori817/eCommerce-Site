@@ -1,3 +1,4 @@
+import "./All.scss";
 import React, { Component } from "react";
 import PRODUCTS from "json/products.json";
 import { Link } from "react-router-dom";
@@ -6,13 +7,19 @@ class All extends Component {
 	render() {
 		return (
 			<div>
-				<h1>All Items</h1>
 				<div className="All">
 					{PRODUCTS.map((product) => {
 						return (
-							<div>
-								<img src={product.images[0].medium}/>
-		 					</div>
+							<div className="container">
+								<Link to={"./Detail/:productId"}>
+									<div className="All-prod center">
+										<h3>{product.name}</h3>
+										<img src={product.images[0].medium}/>
+
+		 							</div>
+								</Link>
+
+							</div>
 						);
 					})}
 				</div>

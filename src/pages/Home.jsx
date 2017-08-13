@@ -6,11 +6,11 @@ class Home extends Component {
 	render() {
 		return (
 			<div>
-				<h1>Home</h1>
 				<div className="Home">
 					{PRODUCTS.map((product) => {
 						return (
 							<div>
+
 								<img src={product.images[0].small}/>
 								<img src={product.images[1].large}/>
 								<img src={product.images[2].small}/>
