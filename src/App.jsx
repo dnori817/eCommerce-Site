@@ -33,6 +33,7 @@ class App extends React.Component {
 		console.log(cart);
 	}
 	render() {
+		const { products, cart } = this.state;
 		return (
 			<BrowserRouter>
 				<div>
@@ -40,8 +41,12 @@ class App extends React.Component {
 					<Switch>
 						<Route exact path="/" component={Home}/>
 						<Route exact path="/All" component={All}/>
-						<Route exact path="/Cart" component={Cart}/>
-						<Route exact path="/Detail/:productId" 			render={(props) => {
+						<Route exact path="/Cart" render = {(props) => {
+							return (
+								<Cart cart = {cart}/>
+							);
+						}}/>
+						<Route exact path="/Detail/:productId" render={(props) => {
 							return (
 								<Detail
 									product= {this._getProduct(props.match.params.productId)}

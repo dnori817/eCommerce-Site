@@ -17,7 +17,7 @@ class Navigation extends Component {
 		}];
 		return (
 			<nav className="Nav">
-				<h3 className="left">Watches n' Shit</h3>
+				<h3 className="left title">Watches n' Shit</h3>
 				<div className="right">
 
 					{links.map((link) => {
@@ -31,7 +31,7 @@ class Navigation extends Component {
 							</NavLink>
 						);
 					})}
-					<Link to={"./Cart"}>
+					<Link to={"/Cart"}>
 					<a className="waves-effect waves-light btn cart">
 						<i className="large material-icons cart-icon">shopping_cart
 						</i><h5>0</h5></a>
