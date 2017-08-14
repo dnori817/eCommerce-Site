@@ -34,7 +34,7 @@ class Navigation extends Component {
 					<Link to={"/Cart"}>
 					<a className="waves-effect waves-light btn cart">
 						<i className="large material-icons cart-icon">shopping_cart
-						</i><h5>0</h5></a>
+						</i><h5>{this.props.cartTotal}</h5></a>
 					</Link>
 				</div>
 			</nav>

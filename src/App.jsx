@@ -14,6 +14,7 @@ class App extends React.Component {
 	state = {
 		products: PRODUCTS,
 		cart: [],
+		carTotal: 0,
 	}
 
 	_getProduct = (productId) => {
@@ -28,16 +29,16 @@ class App extends React.Component {
 				...cart,
 				this._getProduct(productId),
 			],
-			// cartTotal: cart.length + 1,
+			cartTotal: cart.length + 1,
 		});
 		console.log(cart);
 	}
 	render() {
-		const { products, cart } = this.state;
+		const { products, cart, cartTotal } = this.state;
 		return (
 			<BrowserRouter>
 				<div>
-					<Navigation/>
+					<Navigation cartTotal={this.state.cartTotal}/>
 					<Switch>
 						<Route exact path="/" component={Home}/>
 						<Route exact path="/All" component={All}/>
