@@ -1,7 +1,7 @@
+import "./Cart.scss";
 import React, { Component } from "react";
 import PRODUCTS from "json/products.json";
 import { Link } from "react-router-dom";
-// import { cart } from "../App.jsx";
 
 
 class Cart extends Component {
@@ -12,17 +12,23 @@ class Cart extends Component {
 	render() {
 		const { cart } = this.props;
 		return (
-			<div>
+			<div className="">
 				{/* <h1 className="center">Your Cart is Empty</h1>; */}
 				{cart.map((product) => {
 					return (
-						<span className="cart-row">
+						<div className="cart-row">
+							<h4 className="">{product.name}</h4>
 							<img className="" src={product.images[0].small}/>
-							<h5 className="">{product.name}</h5>
-							<h4 className="">${product.price}</h4>
-						</span>
+							<h3 className="right">${product.price}</h3>
+						</div>
+
+
 					);
 				})}
+				<h4 className="total">Total:</h4>
+				<a className="waves-effect waves-light btn center Checkout">
+					Checkout
+				</a>
 			</div>
 		);
 	}
