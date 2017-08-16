@@ -11,6 +11,9 @@ class Cart extends Component {
 	}
 	render() {
 		const { cart } = this.props;
+		const total = cart.reduce(function(prev, product) {
+			return prev + parseFloat(product.price);
+		},0);
 		return (
 			<div className="">
 				{/* <h1 className="center">Your Cart is Empty</h1>; */}
@@ -25,7 +28,7 @@ class Cart extends Component {
 
 					);
 				})}
-				<h4 className="total">Total:</h4>
+				<h4 className="total">Total: ${total}</h4>
 				<a className="waves-effect waves-light btn center Checkout">
 					Checkout
 				</a>
