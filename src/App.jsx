@@ -7,6 +7,7 @@ import Home from "pages/Home";
 import All from "pages/All";
 import Detail from "pages/Detail";
 import Cart from "pages/Cart";
+import Checkout from "pages/Checkout";
 
 
 
@@ -42,17 +43,21 @@ class App extends React.Component {
 					<Switch>
 						<Route exact path="/" component={Home}/>
 						<Route exact path="/All" component={All}/>
+						<Route exact path="/Checkout" component={Checkout}/>
+
 						<Route exact path="/Cart" render = {(props) => {
 							return (
 								<Cart cart = {cart}/>
 							);
-						}}/>
+						}}
+						/>
 						<Route exact path="/Detail/:productId" render={(props) => {
 							return (
 								<Detail
 									product= {this._getProduct(props.match.params.productId)}
 									addToCart = {this._addToCart}
-								/>);
+								/>
+							);
 						}}
 						/>
 					</Switch>
