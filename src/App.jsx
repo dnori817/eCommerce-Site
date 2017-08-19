@@ -8,6 +8,7 @@ import All from "pages/All";
 import Detail from "pages/Detail";
 import Cart from "pages/Cart";
 import Checkout from "pages/Checkout";
+import Success from "pages/Success";
 
 
 
@@ -60,6 +61,7 @@ class App extends React.Component {
 							);
 						}}
 						/>
+						<Route exact path="/Success" component={Success}/>
 					</Switch>
 				</div>
 			</BrowserRouter>

@@ -15,7 +15,10 @@ class Cart extends Component {
 			return prev + parseFloat(product.price);
 		},0);
 		return (
-			<div className="">
+			<div className="row">
+			<div className="col s3"/>
+
+			<div className="col s6">
 				{/* <h1 className="center">Your Cart is Empty</h1>; */}
 				{cart.map((product) => {
 					return (
@@ -35,6 +38,8 @@ class Cart extends Component {
 					</a>
 				</Link>
 			</div>
+			<div className="col s3"/>
+		</div>
 		);
 	}
 }
