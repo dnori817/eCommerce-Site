@@ -33,7 +33,8 @@ class Checkout extends Component {
 						<input className="city" type="text" placeholder="City/Town"/>
 					</div>
 					<div className="col s2">
-						<select value="">
+						<input className="state" type="text" placeholder="State"/>
+						{/* <select value="">
 							<option value="AL">Alabama</option>
 							<option value="AK">Alaska</option>
 							<option value="AZ">Arizona</option>
@@ -85,7 +86,7 @@ class Checkout extends Component {
 							<option value="WV">West Virginia</option>
 							<option value="WI">Wisconsin</option>
 							<option value="WY">Wyoming</option>
-						</select>
+						</select> */}
 					</div>
 					<div className="col s2">
 						<input className="zip" type="text" placeholder="Zip Code"/>

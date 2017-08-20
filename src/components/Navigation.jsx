@@ -18,7 +18,7 @@ class Navigation extends Component {
 		return (
 			<div className="navbar-fixed">
 				<nav className="Nav nav-wrapper">
-					<h3 className="left title">Watches n' Shit</h3>
+					<h3 className="left title">Watches n' Sh*t</h3>
 					<div className="right">
 
 						{links.map((link) => {
@@ -36,7 +36,7 @@ class Navigation extends Component {
 							<a className="waves-effect waves-light btn cart">
 								<h6 className="cart-total center">{this.props.cartTotal}</h6>
 								<i className="cart-icon material-icons center">shopping_cart</i>
-								
+
 							</a>
 						</Link>
 					</div>
